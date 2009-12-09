@@ -1,6 +1,6 @@
 = charguess
 
-* http://google.es
+* http://github.com/ernesto-jimenez/charguess
 
 == DESCRIPTION:
 
