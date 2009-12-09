@@ -1,3 +1,8 @@
+== 1.1 2009-12-09
+
+* 1 bugfix:
+  * Fixed build tasks
+
 == 1.0 2009-12-09
 
 * 1 major enhancement:

@@ -2,7 +2,7 @@
 
 # Generate all the Rake tasks
 # Run 'rake -T' to see list of generated tasks (from gem root directory)
-$hoe = Hoe.new('charguess', "1.0") do |p|
+$hoe = Hoe.new('charguess', "1.1") do |p|
   p.developer('Ernesto Jiménez', 'erjica@gmail.com')
   p.changes              = p.paragraphs_of("History.txt", 0..1).join("\n\n")
   p.post_install_message = 'PostInstall.txt' # TODO remove if post-install message not required
@@ -15,7 +15,6 @@ $hoe = Hoe.new('charguess', "1.0") do |p|
   path = (p.rubyforge_name == p.name) ? p.rubyforge_name : "\#{p.rubyforge_name}/\#{p.name}"
   p.remote_rdoc_dir = File.join(path.gsub(/^#{p.rubyforge_name}\/?/,''), 'rdoc')
   p.rsync_args = '-av --delete --ignore-errors'
-  p.spec_extras = { :extensions => ["ext/charguess/extconf.rb"] }
 end
 
 require 'newgem/tasks' # load /tasks/*.rake
