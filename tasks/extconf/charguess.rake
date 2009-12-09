@@ -26,15 +26,8 @@ namespace :extconf do
   desc "Builds just the #{extension} extension"
   task extension.to_sym => ["#{ext}/Makefile", ext_so ]
 
-  file "#{ext}/Makefile" => ["#{ext}/extconf.rb", "ext/libcharguess/cpp/charguess.a"] do
+  file "#{ext}/Makefile" => ["#{ext}/extconf.rb"] do
     Dir.chdir(ext) do ruby "extconf.rb" end
-  end
-  
-  file "ext/libcharguess/cpp/charguess.a" do
-    Dir.chdir("ext/libcharguess/cpp") do
-      sh("./configure")
-      sh("make")
-    end
   end
 
   file ext_so => ext_files do
