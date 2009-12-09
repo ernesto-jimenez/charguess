@@ -1,0 +1,7 @@
+##### USAGE EXAMPLE #####
+
+require "rubygems"
+require "charguess"
+
+CharGuess.guess("áéíóú")
+#=> "UTF-8"

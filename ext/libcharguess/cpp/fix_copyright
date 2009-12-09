@@ -1,0 +1,32 @@
+#!/usr/bin/perl
+	eval 'exec perl5 -S $0 ${1+"$@"}'
+		if $running_under_some_shell;
+
+my @DEVS = (
+	"Mozilla",
+	"Stéphane Corbé",
+);
+
+my $COPYRIGHT = "Copyright \\(c\\)";
+$^I = '';
+
+my $year = 1900 + (localtime(time))[5];
+
+while (<>) {
+	my $found = 0;
+	if (/$COPYRIGHT/o) {
+		foreach my $dev (@DEVS) {
+			$found++ if /$dev/;
+			last if $found;
+		}
+	}
+	if ($found) {
+		if (/$COPYRIGHT (\d+),/o) {
+			s/^(.*?$COPYRIGHT \d+),/$1-$year,/o if $year > $1;
+		} elsif (/$COPYRIGHT \d+-(\d+),/o) {
+			s/^(.*?$COPYRIGHT \d+)-\d+,/$1-$year,/o if $year > $1;
+		}
+	}
+	print;
+}
+

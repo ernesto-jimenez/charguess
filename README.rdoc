@@ -1,0 +1,26 @@
+= charguess
+
+* http://google.es
+
+== DESCRIPTION:
+
+This gem builds and installs libcharguess and it's binding libcharguess-ruby
+
+* libcharguess: http://libcharguess.sourceforge.net/
+* libcharguess-ruby: http://raa.ruby-lang.org/project/charguess/
+
+== INSTALL:
+
+* sudo gem install charguess
+
+== USSAGE:
+
+require "rubygems"
+require "charguess"
+
+CharGuess.guess("áéíóú")
+#=> "UTF-8"
+
+== LICENSE:
+
+GPL
