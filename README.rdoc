@@ -15,11 +15,11 @@ This gem builds and installs libcharguess and it's binding libcharguess-ruby
 
 == USSAGE:
 
-require "rubygems"
-require "charguess"
-
-CharGuess.guess("áéíóú")
-#=> "UTF-8"
+  require "rubygems"
+  require "charguess"
+  
+  CharGuess.guess("áéíóú")
+  #=> "UTF-8"
 
 == LICENSE:
 
