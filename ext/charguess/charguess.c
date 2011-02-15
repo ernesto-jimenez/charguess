@@ -1,7 +1,10 @@
 #include "ruby.h"
-#include "intern.h"
 #include <charguess.h>
 
+#ifndef RSTRING_PTR
+#include "intern.h"
+#define RSTRING_PTR(s) (RSTRING(s)->ptr) 
+#endif
 
 static VALUE mCharGuess;
 
@@ -10,7 +13,7 @@ static VALUE cg_s_guess(VALUE klass, VALUE str) {
   int ret;
   Check_Type(str, T_STRING);
   ret = CharGuessInit();
-  ptr = GuessChardet((const char *)RSTRING(str)->ptr);
+  ptr = GuessChardet((const char *)RSTRING_PTR(str));
   ret = CharGuessDone();
   return ptr ? rb_str_new2(ptr) : Qnil;
 }

@@ -1,3 +1,4 @@
+# encoding: utf-8
 require "test/unit"
 
 $:.unshift File.dirname(__FILE__) + "/../ext/charguess"

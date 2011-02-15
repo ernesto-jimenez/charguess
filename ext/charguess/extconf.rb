@@ -11,6 +11,7 @@ Dir.chdir(libcharguess) do
 end
 
 dir_config('charguess', libcharguess, libcharguess)
+find_header("intern.h", TRY_LINK)
 
 if have_library('charguess') && have_library('stdc++') && have_header('charguess.h')
   create_makefile('charguess')

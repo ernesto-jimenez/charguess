@@ -1,3 +1,5 @@
+Gemfile
+Gemfile.lock
 History.txt
 Manifest.txt
 PostInstall.txt
@@ -106,9 +108,7 @@ ext/libcharguess/cpp/charguess.cpp
 ext/libcharguess/cpp/charguess.h
 ext/libcharguess/cpp/charsetProber.h
 ext/libcharguess/cpp/codingStateMachine.h
-ext/libcharguess/cpp/config.h
 ext/libcharguess/cpp/config.h.in
-ext/libcharguess/cpp/config.status
 ext/libcharguess/cpp/configure
 ext/libcharguess/cpp/configure.in
 ext/libcharguess/cpp/depcomp
