@@ -2,11 +2,11 @@
 
 Gem::Specification.new do |s|
   s.name = %q{charguess}
-  s.version = "1.3.20110215234539"
+  s.version = "1.3.20110226181011"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Ernesto Jim\303\251nez"]
-  s.date = %q{2011-02-15}
+  s.date = %q{2011-02-26}
   s.description = %q{This gem builds and installs libcharguess and it's binding libcharguess-ruby
 
 * libcharguess: http://libcharguess.sourceforge.net/
