@@ -1,0 +1,10 @@
+*.gem
+Makefile
+*.bundle
+*.log
+*.o
+*.a
+config.*
+*.Plo
+.deps
+conftest*
