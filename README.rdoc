@@ -28,6 +28,7 @@ This gem builds and installs libcharguess and it's binding libcharguess-ruby
 * Stéphane Corbé <noubi@users.sourceforge.net> extracted libcharguess from Mozilla's sources
 * Nando Vieira <fnando.vieira@gmail.com> created the setup this gem is based on: https://github.com/fnando/charguess
 * Will Palmer <wmpalmer@gmail.com> helped fixing this gem in Ruby 1.9
+* Kyle Wilkinson <kai@wikyd.org> fix to fix build under Ruby 1.8 & Rake 0.9+
 
 == LICENSE:
 
